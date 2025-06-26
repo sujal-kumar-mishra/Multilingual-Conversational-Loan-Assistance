@@ -7,12 +7,12 @@ import requests
 import google.generativeai as genai
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
-
+load_dotenv() 
 
 # Replace with your bot & OpenAI API keys
-TOKEN = "8125759209:AAEWipIexhQeHmIFykw1J3xpG6ujZPRhIyM"
-GEMINI_API_KEY = "AIzaSyC9i96-x18BGKIeV7HOHKn-piu4e5R9IUs"
-SARVAM_API_KEY = "d60e2e18-3b3c-492d-8faf-7f9db7c55201"
+TOKEN = os.getenv("TOKEN")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+SARVAM_API_KEY = os.getenv("SARVAM_API_KEY")
 
 # Configure Gemini API
 try:
